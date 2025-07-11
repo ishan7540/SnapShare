@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.GalleryStatsFragment"
+        >
+
+
+        <TextView
+            android:id="@+id/heading"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Gallery Stats"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintVertical_chainStyle="spread" />
+
+        <View
+            android:id="@+id/v1"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/gradientbackground"
+            android:backgroundTint="@color/lightblue"
+            app:layout_constraintBottom_toTopOf="@id/v2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/heading"
+            app:layout_constraintVertical_bias="0.019" />
+
+        <View
+            android:id="@+id/v2"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/gradientbackground"
+            android:backgroundTint="@color/lightred"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/v1"
+            android:layout_marginTop="10dp"
+            app:layout_constraintVertical_bias="0.018"
+            app:layout_constraintVertical_chainStyle="spread" />
+
+        <ImageView
+            android:id="@+id/backgroundimg1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/redcircle"
+            android:backgroundTint="@color/middleblue"
+            app:layout_constraintBottom_toBottomOf="@id/v1"
+            app:layout_constraintEnd_toEndOf="@id/v1"
+            app:layout_constraintHorizontal_bias="0.03"
+            app:layout_constraintStart_toStartOf="@id/v1"
+            app:layout_constraintTop_toTopOf="@id/v1"
+            />
+        <ImageView
+            android:id="@+id/backgroundimg2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/redcircle"
+            android:backgroundTint="@color/middlered"
+            app:layout_constraintBottom_toBottomOf="@id/v2"
+            app:layout_constraintEnd_toEndOf="@id/v2"
+            app:layout_constraintHorizontal_bias="0.03"
+            app:layout_constraintStart_toStartOf="@id/v2"
+            app:layout_constraintTop_toTopOf="@id/v2"
+            />
+        <ImageView
+            android:id="@+id/img1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:layout_constraintTop_toTopOf="@id/backgroundimg1"
+            app:layout_constraintBottom_toBottomOf="@id/backgroundimg1"
+            app:layout_constraintStart_toStartOf="@id/backgroundimg1"
+            app:layout_constraintEnd_toEndOf="@id/backgroundimg1"
+            android:src="@drawable/photos_svgrepo_com"
+            app:tint="@color/darblue" />
+        <ImageView
+            android:id="@+id/img2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:layout_constraintTop_toTopOf="@id/backgroundimg2"
+            app:layout_constraintBottom_toBottomOf="@id/backgroundimg2"
+            app:layout_constraintStart_toStartOf="@id/backgroundimg2"
+            app:layout_constraintEnd_toEndOf="@id/backgroundimg2"
+            android:src="@drawable/heart_svgrepo_com__1_"
+            app:tint="@color/red" />
+
+        <TextView
+            android:id="@+id/tv_heading_v1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Photos"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/tv_subtext_v1"
+            app:layout_constraintEnd_toEndOf="@id/v1"
+            app:layout_constraintHorizontal_bias="0.3"
+            app:layout_constraintStart_toStartOf="@id/backgroundimg1"
+            app:layout_constraintTop_toTopOf="@id/v1" />
+
+        <TextView
+            android:id="@+id/tv_subtext_v1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="All your captures"
+            app:layout_constraintBottom_toBottomOf="@id/v1"
+            app:layout_constraintEnd_toEndOf="@id/tv_heading_v1"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/tv_heading_v1"
+            app:layout_constraintTop_toBottomOf="@id/tv_heading_v1" />
+
+        <TextView
+            android:id="@+id/tv_v1_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="127"
+            android:textSize="30sp"
+            android:textColor="@color/blue"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/v1"
+            app:layout_constraintEnd_toEndOf="@id/v1"
+            app:layout_constraintHorizontal_bias="0.926"
+            app:layout_constraintStart_toEndOf="@id/tv_heading_v1"
+            app:layout_constraintTop_toTopOf="@id/v1"
+            app:layout_constraintVertical_bias="0.47" />
+
+        <TextView
+            android:id="@+id/tv_heading_v2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Favorites"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintHorizontal_bias="0.3"
+            app:layout_constraintBottom_toTopOf="@id/tv_subtext_v2"
+            app:layout_constraintEnd_toEndOf="@id/v2"
+            app:layout_constraintStart_toStartOf="@id/backgroundimg2"
+            app:layout_constraintTop_toTopOf="@id/v2" />
+
+        <TextView
+            android:id="@+id/tv_subtext_v2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your loved photos"
+            app:layout_constraintBottom_toBottomOf="@id/v2"
+            app:layout_constraintEnd_toEndOf="@id/tv_heading_v2"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/tv_heading_v2"
+            app:layout_constraintTop_toBottomOf="@id/tv_heading_v2" />
+
+        <TextView
+            android:id="@+id/tv_v2_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="42"
+            android:textSize="30sp"
+            android:textColor="@color/red"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/v2"
+            app:layout_constraintEnd_toEndOf="@id/v2"
+            app:layout_constraintHorizontal_bias="0.926"
+            app:layout_constraintStart_toEndOf="@id/tv_heading_v2"
+            app:layout_constraintTop_toTopOf="@id/v2"
+            app:layout_constraintVertical_bias="0.47" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

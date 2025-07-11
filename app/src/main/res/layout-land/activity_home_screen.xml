@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    >
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".HomeScreen"
+        android:background="@color/white"
+        >
+
+        <View
+            android:id="@+id/appbar"
+            android:background="@color/lightestpink"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            app:layout_constraintBottom_toTopOf="@+id/fv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toTopOf="parent" />
+
+<!--        <ImageView-->
+<!--            android:layout_width="60dp"-->
+<!--            android:layout_height="60dp"-->
+<!--            android:id="@+id/photos"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/appbar"-->
+<!--            app:layout_constraintEnd_toEndOf="@+id/appbar"-->
+<!--            app:layout_constraintTop_toTopOf="@id/appbar"-->
+<!--            app:layout_constraintHorizontal_bias="0.05"-->
+<!--            app:layout_constraintBottom_toBottomOf="@id/appbar"-->
+
+<!--            android:src="@drawable/gradientbackground"/>-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/photosoutline"-->
+<!--            android:layout_width="60dp"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:src="@drawable/user_person_account_avatar_profile_man_svgrepo_com"-->
+<!--            app:layout_constraintBottom_toBottomOf="@id/photos"-->
+<!--            app:layout_constraintEnd_toEndOf="@+id/photos"-->
+<!--            app:layout_constraintStart_toStartOf="@id/photos"-->
+<!--            app:layout_constraintTop_toTopOf="@id/photos" />-->
+        <TextView
+            android:id="@+id/tv_gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  Gallery"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/appbar"
+            app:layout_constraintEnd_toEndOf="@+id/appbar"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/appbar"
+            app:layout_constraintTop_toTopOf="@id/appbar"
+            />
+<!--        <TextView-->
+<!--            android:id="@+id/tv_gallery"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="  Gallery"-->
+<!--            android:textSize="35sp"-->
+<!--            android:textStyle="bold"-->
+<!--            app:layout_constraintBottom_toBottomOf="@id/appbar"-->
+<!--            app:layout_constraintEnd_toEndOf="@+id/appbar"-->
+<!--            app:layout_constraintHorizontal_bias="0.0"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/photos"-->
+<!--            app:layout_constraintTop_toTopOf="@id/appbar"-->
+<!--            />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/redcircle"-->
+<!--            android:layout_width="40dp"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:src="@drawable/redcircle"-->
+<!--            app:layout_constraintBottom_toBottomOf="@id/appbar"-->
+<!--            app:layout_constraintEnd_toEndOf="@id/appbar"-->
+<!--            app:layout_constraintHorizontal_bias="0.904"-->
+<!--            android:backgroundTint="@color/red"-->
+<!--            app:layout_constraintStart_toStartOf="@id/appbar"-->
+<!--            app:layout_constraintTop_toTopOf="@id/appbar" />-->
+
+
+<!--        <ImageView-->
+<!--            android:id="@+id/redheart"-->
+<!--            android:layout_width="30dp"-->
+<!--            android:layout_height="30dp"-->
+
+<!--            android:src="@drawable/heart_svgrepo_com__1_"-->
+<!--            app:layout_constraintBottom_toBottomOf="@id/redcircle"-->
+<!--            app:layout_constraintEnd_toEndOf="@id/redcircle"-->
+<!--            android:foregroundTint="@color/red"-->
+<!--            app:layout_constraintStart_toStartOf="@id/redcircle"-->
+<!--            app:layout_constraintTop_toTopOf="@id/redcircle"-->
+<!--            app:tint="@color/red" />-->
+
+        <TextView
+            android:id="@+id/heart_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="@id/appbar"
+            app:layout_constraintEnd_toEndOf="@id/appbar"
+            app:layout_constraintHorizontal_bias="0.304"
+            app:layout_constraintStart_toEndOf="@id/redcircle"
+            app:layout_constraintTop_toTopOf="@id/appbar"
+            app:layout_constraintVertical_bias="0.416" />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fv"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/navigation_bar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appbar"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/navigation_bar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:outlineAmbientShadowColor="@color/blue"
+            app:itemRippleColor="@color/pink"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:menu="@menu/menu"
+            />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

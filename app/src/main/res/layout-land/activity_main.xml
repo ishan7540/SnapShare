@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:background="#FAFA"
+        android:padding="25dp">
+
+        <TextView
+            android:id="@+id/tv_signin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign In"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.05" />
+
+        <ImageView
+            android:id="@+id/background_user"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="@drawable/userbackgroundcircular"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_signin"
+            app:layout_constraintVertical_bias="0.068" />
+
+        <ImageView
+            android:id="@+id/front_user"
+            android:layout_width="60dp"
+            android:layout_height="120dp"
+            android:layout_marginBottom="8dp"
+            android:foregroundTint="@color/white"
+            android:src="@drawable/user_person_account_avatar_profile_man_svgrepo_com"
+            app:layout_constraintBottom_toBottomOf="@+id/background_user"
+            app:layout_constraintEnd_toEndOf="@+id/background_user"
+            app:layout_constraintStart_toStartOf="@+id/background_user" />
+
+        <TextView
+            android:id="@+id/tv_gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gallery"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_gallery"
+            app:layout_constraintVertical_bias="0.326" />
+
+        <TextView
+
+            android:id="@+id/tv_welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome Back"
+            android:textColor="@color/grey"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.378"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etv_email"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:background="@drawable/textfieldbackground"
+            android:hint="Email"
+            android:paddingHorizontal="60dp"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@id/etv_password"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_welcome"
+            app:layout_constraintVertical_bias="0.463" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:layout_constraintStart_toStartOf="@id/etv_email"
+            app:layout_constraintEnd_toEndOf="@id/etv_email"
+            app:layout_constraintTop_toTopOf="@id/etv_email"
+            app:layout_constraintBottom_toBottomOf="@id/etv_email"
+            app:layout_constraintHorizontal_bias="0.03"
+            android:src="@drawable/email_1_svgrepo_com" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:layout_constraintStart_toStartOf="@id/etv_password"
+            app:layout_constraintEnd_toEndOf="@id/etv_password"
+            app:layout_constraintTop_toTopOf="@id/etv_password"
+            app:layout_constraintBottom_toBottomOf="@id/etv_password"
+
+            app:layout_constraintHorizontal_bias="0.03"
+            android:src="@drawable/lock_svgrepo_com" />
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etv_password"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:background="@drawable/textfieldbackground"
+            android:paddingHorizontal="60dp"
+            android:hint="Password"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@id/tv_forgotpassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etv_email"
+            app:layout_constraintVertical_bias="0.549" />
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:background="@drawable/gradientbackground"
+            android:paddingHorizontal="60dp"
+            android:text="Submit"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            app:backgroundTint="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.682" />
+
+        <TextView
+            android:id="@+id/tv_forgotpassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forgot Password?"
+            android:textColor="@color/blue"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/btn_submit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etv_password"
+
+            />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="20dp"
+            android:background="@color/grey"
+            app:layout_constraintBottom_toTopOf="@id/btn_continuewithgoogle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_submit"
+            app:layout_constraintVertical_bias="0.723" />
+
+        <Button
+            android:id="@+id/btn_continuewithgoogle"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:background="@drawable/textfieldbackground"
+            android:paddingHorizontal="60dp"
+            android:text="Continue with Google"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            app:backgroundTint="@null"
+            app:layout_constraintBottom_toTopOf="@id/btn_continuewthfacebook"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/line"
+            app:layout_constraintVertical_bias="0.801" />
+
+        <Button
+            android:id="@+id/btn_continuewthfacebook"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:background="@drawable/textfieldbackground"
+            android:paddingHorizontal="60dp"
+            android:text="Continue with Facebook"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            app:backgroundTint="@null"
+            app:layout_constraintBottom_toTopOf="@id/tv_noaccount"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_continuewithgoogle"
+            Of="parent"
+            app:layout_constraintVertical_bias="0.884" />
+
+        <TextView
+            android:id="@+id/tv_noaccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don't have an account"
+            android:textColor="@color/grey"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.924" />
+
+        <TextView
+            android:id="@+id/tv_signup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign Up"
+            android:textColor="@color/blue"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.953" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
