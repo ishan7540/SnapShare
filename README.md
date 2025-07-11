@@ -1,4 +1,4 @@
-# GalleryApp - Android Media Gallery
+# ShapShare - Android Media Gallery
     A modern Android gallery app that uses Room Database, ExoPlayer, and Kotlin Coroutines to display images and play videos, with clean architecture and performance-focused techniques.
 
 ##Features
